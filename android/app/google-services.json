@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "154633512779",
+    "project_id": "jifunz-app-8a855",
+    "storage_bucket": "jifunz-app-8a855.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:154633512779:android:3a2a25b4378d03385d6ace",
+        "android_client_info": {
+          "package_name": "com.losingtech.jifunzapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "154633512779-1p196546rh1madnd0m4rbpc62m6ge7p7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.losingtech.jifunzapp",
+            "certificate_hash": "60ea1e72719d74a1a9cfc437b574d76dccf94415"
+          }
+        },
+        {
+          "client_id": "154633512779-099j3hmmonosn0snovruvdedf1gbgu9i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKyhO3Gz5fljn4_PWmUPoncA5xPYGWQPo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "154633512779-099j3hmmonosn0snovruvdedf1gbgu9i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
