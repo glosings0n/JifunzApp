@@ -16,7 +16,7 @@ Utilisation des outils modernes de développement :
 
 #### Version 📱
 
-**Jifunz'App** n'est qu'à sa première sortie donc la version ```1.0.0``` est en teste.
+**Jifunz'App** n'est qu'à sa première sortie donc la version ```0.1.0``` est en teste.
 Testons ensemble via le lien : 
 Et faites nous vos feedbacks ! 📫
 

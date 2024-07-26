@@ -6,9 +6,9 @@ import '../../../shared/shared.dart';
 
 Widget aboutDialogBody(double width, ThemeData theme, BuildContext context) {
   Map infos = {
-    "Version de l'App : ".tr(): "1.0.1",
+    "Version de l'App : ".tr(): "0.1.0",
     "Version d'Android : ".tr(): "11+",
-    'Dernière Mise en jour : '.tr(): "23 Juillet 2024".tr(),
+    'Dernière Mise en jour : '.tr(): "25 Juillet 2024".tr(),
   };
   return Column(
     children: [
