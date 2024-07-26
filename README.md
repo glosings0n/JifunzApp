@@ -4,7 +4,7 @@
 
 ## Concepteur 👨‍💻
 
-Conçu par **Georges Byona Musana** (alias ```G-Losingson``` 😎), étudiant en 2ème année de Baccalauréat en Ingénierie des Logiciels 💻. Il est non seulement passionné de la technologie mais aussi responsable du club des étudiants développeurs **Google** de l'Université Catholique de Bukavu - [GDSC UCB](https://gdsc.community.dev/universite-catholique-de-bukavu-bukavu-democratic-republic-of-the-congo/).\nAvec une expérience de 2 ans dans le monde de la tech, il fait preuve d'enthousiasme et de courage ardent ! 🎊
+Conçu par **Georges Byona Musana** (alias ```G-Losingson``` 😎), étudiant en 2ème année de Baccalauréat en Ingénierie des Logiciels 💻. Il est non seulement passionné de la technologie mais aussi responsable du club des étudiants développeurs **Google** de l'Université Catholique de Bukavu - [GDSC UCB](https://gdsc.community.dev/universite-catholique-de-bukavu-bukavu-democratic-republic-of-the-congo/). Avec une expérience de 2 ans dans le monde de la tech, il fait preuve d'enthousiasme et de courage ardent ! 🎊
 
 ### Technologies 🧰
 
