@@ -11,5 +11,5 @@ Avec une expérience de 2 ans dans la tech, il fait preuve d'enthousiasme et de 
 ## Technologies
 
 Utilisation des outils modernes de développement :
-1. '''Flutter''' pour une interface attractive et une meilleure expérience utilisateur;
-2. '''Firebase''' pour la gérance backend et la base des données.
+1. ```Flutter pour une interface attractive et une meilleure expérience utilisateur;
+2. ```Firebase pour la gérance backend et la base des données.
