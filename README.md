@@ -1,3 +1,3 @@
-# jifunzapp
+# JifunzApp
 
-A new Flutter project.
+Une app créer pour aider les collègues étudiants dans leurs études en regroupant une collection des anciens questionnaires d'examens, interrogartions, TP, exercices, ...
