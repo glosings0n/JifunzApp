@@ -15,7 +15,7 @@ Utilisation des outils modernes de développement :
 #### Version 📱
 
 **Jifunz'App** n'est qu'à sa première sortie donc la version ```0.1.0``` est en teste.
-Testons ensemble via le lien : 
+Testons ensemble via le lien : [jifunzapp.apk](https://drive.google.com/file/d/1p5l0vcwsyhGGWwjME1zr9cD27EXP6pa6/view?usp=sharing)
 Et faites nous vos feedbacks ! 📫
 
 ##### Réseaux Sociaux 🌐
