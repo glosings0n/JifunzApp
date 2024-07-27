@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 import '../../../../controllers/controllers.dart';
 import '../../../shared/shared.dart';
@@ -53,11 +52,7 @@ class HasDataBody extends StatelessWidget {
                             : controller.maxColumnCount == 3
                                 ? controller.maxColumnCount * 60.0
                                 : controller.maxColumnCount * 35.0,
-                        child: SfPdfViewer.network(
-                          tuyau.imgUrl,
-                          enableTextSelection: false,
-                          scrollDirection: PdfScrollDirection.vertical,
-                        ),
+                        child: Container(),
                       )
                     : CachedNetworkImage(
                         imageUrl: tuyau.imgUrl,

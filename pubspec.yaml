@@ -33,7 +33,6 @@ dependencies:
   share_plus: ^9.0.0
   shared_preferences: ^2.2.3
   shimmer: ^3.0.0
-  syncfusion_flutter_pdfviewer: ^26.2.5
   url_launcher: ^6.3.0
 
 dev_dependencies:

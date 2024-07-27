@@ -80,12 +80,14 @@ class HomePage extends StatelessWidget {
                                   controller: controller,
                                 );
                               }
-                            } else {
+                            } else if (!snapshot.hasData) {
                               return controller.filter != null
                                   ? EmptyBody(
                                       cours: user.courses![controller.filter!],
                                     )
-                                  : const LoadingBody();
+                                  : const EmptyBody();
+                            } else {
+                              return const LoadingBody();
                             }
                           },
                         ),

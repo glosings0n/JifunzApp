@@ -99,7 +99,6 @@ class DetailsPage extends StatelessWidget {
                 ? Hero(
                     tag: 'Image $index',
                     child: Container(),
-                    // child: PDFViewer(document: doc!),
                   )
                 : InteractiveViewer(
                     child: Hero(

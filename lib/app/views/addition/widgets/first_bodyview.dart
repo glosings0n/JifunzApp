@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 class FirstBodyView extends StatefulWidget {
   final File? selectedFile;
@@ -30,11 +29,7 @@ class _FirstBodyViewState extends State<FirstBodyView> {
             child: widget.isPDF
                 ? SizedBox(
                     width: width,
-                    child: SfPdfViewer.file(
-                      widget.selectedFile!,
-                      scrollDirection: PdfScrollDirection.horizontal,
-                      enableTextSelection: false,
-                    ),
+                    child: Container(),
                   )
                 : InteractiveViewer(
                     child: Container(
