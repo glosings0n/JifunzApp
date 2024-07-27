@@ -5,7 +5,9 @@
 ## Concepteur 👨‍💻
 
 Conçu par **Georges Byona Musana** (alias ```G-Losingson``` 😎), étudiant en 2ème année de Baccalauréat en Ingénierie des Logiciels 💻
+
 Il est non seulement passionné de la technologie mais aussi responsable du club des étudiants développeurs **Google** de l'Université Catholique de Bukavu - [GDSC UCB](https://gdsc.community.dev/universite-catholique-de-bukavu-bukavu-democratic-republic-of-the-congo/)
+
 Avec une expérience de 2 ans dans le monde de la tech, il fait preuve d'enthousiasme et de courage ardent ! 🎊
 
 ### Technologies 🧰
@@ -17,10 +19,13 @@ Utilisation des outils modernes de développement :
 #### Version 📱
 
 **Jifunz'App** n'est qu'à sa première sortie donc la version ```0.1.0``` est en teste.
-Testons ensemble via le lien : 
+
+Testons ensemble via le lien : [jifunzapp.apk](https://drive.google.com/file/d/1p5l0vcwsyhGGWwjME1zr9cD27EXP6pa6/view?usp=sharing).
+
 Et faites nous vos feedbacks ! 📫
 
 ##### Réseaux Sociaux 🌐
 
 Retrouver le concepteur en googlant le nom ```Georges Byona``` dans n'importe quel navigateur et vous y trouverez tous les comptes disponibles !
+
 Merci de nous faire part de vos remarques ! 🙂
