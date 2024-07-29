@@ -1,4 +1,4 @@
-# JifunzApp 📚
+# Jifunz'App 📚
 
 **"Jifunz'App"** de la contraction entre _"Jifunza"_ qui vient du **Swahili** pour dire **"Apprendre"** 📖 et _"App"_ qui renvoie à une application 📱, est une application mobile créer pour aider les étudiants dans leurs études en regroupant une collection des anciens questionnaires d'examens, interrogartions, TP, exercices, ... 🚀
 
