@@ -22,9 +22,9 @@ Avec une expérience de 2 ans dans le monde de la technologie, il fait preuve d'
 
 **Jifunz'App** n'est qu'à sa première sortie avec la version ```0.1.0```
 
-Téléchargez ou mettez en jour l'App ➡️ [jifunzapp.apk](https://drive.google.com/file/d/1s7di5SJb9x9egsDQxU-TBd0Lxa64UnJs/view?usp=sharing)
+Téléchargez ou mettez en jour l'App ➡️ [jifunzapp.apk](https://drive.google.com/file/d/1s7di5SJb9x9egsDQxU-TBd0Lxa64UnJs/view?usp=sharing) - Si vous rencontrez des soucis, merci de nous contacter.
 
-Et faites nous vos feedbacks ! 📫
+N'oubliez pas de nous faire part de vos vos feedbacks 📫 en utilisant l'App ! 😉
 
 ##### Réseaux Sociaux 🌐
 
