@@ -32,4 +32,4 @@ Retrouver le concepteur en googlant le nom ```Georges Byona``` !
 
 Merci de nous faire part de vos remarques !✍
 
-**LosingTech® || ©LosingDynasty 2k24**
+**LosingTech® | ©LosingDynasty 2k24**
