@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static dynamic tdBlack = const Color(0xFF0B0B0B);
-  static dynamic tdBlackO = const Color(0xFF141414);
+  static dynamic tdBlack = const Color(0xFF0A0A0A);
+  static dynamic tdBlackO = Colors.grey.shade900;
 
   static dynamic tdWhite = const Color(0xFFFFFFFF);
   static dynamic tdWhiteO = const Color(0xFFF5F5F5);

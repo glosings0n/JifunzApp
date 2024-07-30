@@ -119,7 +119,7 @@
     "Ici, vous ne pouvez modifier que les infos supplémentaires donc votre faculté et votre promotion car nous ne sommes que dans une seule Université pour l'instant.": "Ici, vous ne pouvez modifier que les infos supplémentaires donc votre faculté et votre promotion car nous ne sommes que dans une seule Université pour l'instant.",
     "Si vous comptez changer de compte, veuillez vous déconnecter puis vous reconnecter avec un autre.": "Si vous comptez changer de compte, veuillez vous déconnecter puis vous reconnecter avec un autre.",
     "Impossible d'ajouter le doc, réessayer plus tard": "Impossible d'ajouter le doc, réessayer plus tard",
-    "Fichier volumineux > 2Mb": "Fichier volumineux > 2Mb",
+    "Fichier volumineux > 5Mo": "Fichier volumineux > 5Mo",
     "Extension non prise en charge": "Extension non prise en charge",
     "Veuillez sélectionner un fichier pdf": "Veuillez sélectionner un fichier pdf",
     "Impossible de partager l'image pour l'instant": "Impossible de partager l'image pour l'instant",
@@ -144,5 +144,13 @@
     "Je te partage cette image pour ton apprentissage depuis Jifunz'App": "Je te partage cette image pour ton apprentissage depuis Jifunz'App",
     "Réessayer": "Réessayer",
     "Modification du profil": "Modification du profil",
-    "25 Juillet 2024": "25 Juillet 2024"
+    "suite d'un autre doc": "suite d'un autre doc",
+    "Nouvelle Mise en jour !": "Nouvelle Mise en jour !",
+    "Ravi de te revoir une fois de plus.": "Ravi de te revoir une fois de plus.",
+    "Sais-tu que": "Sais-tu que",
+    "a une nouvelle mise en jour ! N'hésite pas à la mettre en jour pour profiter des dernières fonctionnalités !": "a une nouvelle mise en jour ! N'hésite pas à la mettre en jour pour profiter des dernières fonctionnalités !",
+    "Ignorer": "Ignorer",
+    "Mettre en jour": "Mettre en jour",
+    "Pour plus de détails, visitez :": "Pour plus de détails, visitez :",
+    "31 Juillet 2024": "31 Juillet 2024"
 }

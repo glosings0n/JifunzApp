@@ -22,14 +22,15 @@ oCustomSystemChrome(context, MainController mainController) {
 lightCustomSystemChrome(context, MainController mainController) {
   return SystemChrome.setSystemUIOverlayStyle(
     SystemUiOverlayStyle(
-      statusBarColor: mainController.isDark ? Colors.black : AppColors.tdWhite,
+      statusBarColor:
+          mainController.isDark ? AppColors.tdBlack : AppColors.tdWhite,
       statusBarIconBrightness:
           mainController.isDark ? Brightness.light : Brightness.dark,
       systemNavigationBarDividerColor: Colors.transparent,
       systemNavigationBarIconBrightness:
           mainController.isDark ? Brightness.light : Brightness.dark,
       systemNavigationBarColor:
-          mainController.isDark ? Colors.black : AppColors.tdWhite,
+          mainController.isDark ? AppColors.tdBlack : AppColors.tdWhite,
     ),
   );
 }

@@ -46,7 +46,8 @@ class JifunzApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (context) => MainController()
             ..changeThemeMode(darkMode: isDark)
-            ..checkConnection(context),
+            ..checkConnection(context)
+            ..checkUpdates(),
         ),
         ChangeNotifierProvider(
           create: (context) => TuyauController(),

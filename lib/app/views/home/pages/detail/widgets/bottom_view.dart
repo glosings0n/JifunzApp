@@ -101,8 +101,7 @@ class BottomView extends StatelessWidget {
                             );
             },
             child: Container(
-              // ignore: prefer_const_constructors
-              padding: EdgeInsets.all(5),
+              padding: const EdgeInsets.all(5),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,

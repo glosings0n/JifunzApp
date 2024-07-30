@@ -26,10 +26,10 @@ class HasDataBody extends StatelessWidget {
         onDoubleTap: controller.gridDoubleTap,
         child: MasonryGridView.count(
           crossAxisCount: controller.maxColumnCount,
-          mainAxisSpacing: width * 0.02,
-          crossAxisSpacing: width * 0.02,
+          mainAxisSpacing: width * 0.005,
+          crossAxisSpacing: width * 0.005,
           scrollDirection: Axis.vertical,
-          itemCount: tuyaux.length,
+          itemCount: tuyaux.length + (controller.isLoading ? 1 : 0),
           itemBuilder: (context, index) {
             final tuyau = tuyaux[index];
             return GestureDetector(

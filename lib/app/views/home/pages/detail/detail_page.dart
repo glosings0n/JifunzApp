@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
@@ -19,11 +21,12 @@ class DetailsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final mainController = Provider.of<MainController>(context);
     final user = Provider.of<UserDataController>(context);
+    lightCustomSystemChrome(context, mainController);
     final width = MediaQuery.sizeOf(context).width;
     final theme = Theme.of(context);
     return Scaffold(
-      backgroundColor: theme.highlightColor,
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: Text(
@@ -31,7 +34,10 @@ class DetailsPage extends StatelessWidget {
           overflow: TextOverflow.ellipsis,
           maxLines: 1,
         ),
-        titleTextStyle: Theme.of(context).textTheme.bodyMedium,
+        titleTextStyle: GoogleFonts.raleway(
+          fontSize: width * 0.04,
+          color: Theme.of(context).primaryColorLight,
+        ),
         actions: [
           if (user.email == 'georgesbyona@gmail.com') ...{
             GestureDetector(
@@ -135,6 +141,25 @@ class DetailsPage extends StatelessWidget {
             userName: user.name!,
             userEmail: user.email!,
           ),
+          if (tuyau.suite == "Oui")
+            Container(
+              decoration: BoxDecoration(
+                color: theme.primaryColor,
+                borderRadius: BorderRadius.circular(50),
+              ),
+              margin: EdgeInsets.only(top: width * 0.02, left: width * 0.02),
+              padding: EdgeInsets.symmetric(
+                horizontal: width * 0.02,
+                vertical: width * 0.01,
+              ),
+              child: Text(
+                "suite d'un autre doc".tr(),
+                style: GoogleFonts.raleway(
+                  fontSize: width * 0.025,
+                  color: Theme.of(context).primaryColorLight,
+                ),
+              ),
+            )
         ],
       ),
     );

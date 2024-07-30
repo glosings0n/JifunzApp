@@ -16,6 +16,7 @@ Container bottomButton(String text, {width, color, txtColor, icon}) {
             color: color,
           )
         : BoxDecoration(
+            color: Colors.transparent,
             border: Border.all(
               color: AppColors.tdWhiteO,
               width: 1,

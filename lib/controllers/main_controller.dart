@@ -11,6 +11,16 @@ import '../app/shared/shared.dart';
 import '../data/data.dart';
 
 class MainController extends ChangeNotifier {
+  int updateCount = 0;
+  Future<void> checkUpdates() async {
+    final query = await FirebaseFirestore.instance
+        .collection('appdata')
+        .doc('update')
+        .get();
+    final doc = query.data();
+    doc != null ? updateCount = doc['count'] : updateCount = 0;
+  }
+
   bool _isDark = false;
   bool _isSignInLoading = false;
   Locale locale = const Locale('fr', 'FR');
@@ -47,35 +57,28 @@ class MainController extends ChangeNotifier {
     String? email,
     String? content,
   }) async {
-    try {
-      String? phoneInfo;
-      final result = await InternetAddress.lookup('google.com');
-      if (result.isNotEmpty && result[0].address.isNotEmpty) {
-        final deviceInfo = DeviceInfoPlugin();
-        if (defaultTargetPlatform == TargetPlatform.android) {
-          AndroidDeviceInfo androidInfo = await deviceInfo.androidInfo;
-          phoneInfo = androidInfo.model;
-        } else if (defaultTargetPlatform == TargetPlatform.iOS) {
-          IosDeviceInfo iosInfo = await deviceInfo.iosInfo;
-          phoneInfo = iosInfo.model;
-        }
-        await FireStoreServices().addFeedBack(
-          FeedBackModel(
-            userName: name!,
-            userMail: email!,
-            content: content,
-            userPhoneType: phoneInfo,
-          ),
-        );
-        myCustomSnackBar(
-          context: context,
-          text: 'Merci pour votre feedback',
-        );
+    String? phoneInfo;
+    checkConnection(context);
+    if (isConnected) {
+      final deviceInfo = DeviceInfoPlugin();
+      if (defaultTargetPlatform == TargetPlatform.android) {
+        AndroidDeviceInfo androidInfo = await deviceInfo.androidInfo;
+        phoneInfo = androidInfo.model;
+      } else if (defaultTargetPlatform == TargetPlatform.iOS) {
+        IosDeviceInfo iosInfo = await deviceInfo.iosInfo;
+        phoneInfo = iosInfo.model;
       }
-    } on SocketException catch (_) {
+      await FireStoreServices().addFeedBack(
+        FeedBackModel(
+          userName: name!,
+          userMail: email!,
+          content: content,
+          userPhoneType: phoneInfo,
+        ),
+      );
       myCustomSnackBar(
         context: context,
-        text: "Erreur... Vérifie ta connexion",
+        text: 'Merci pour votre feedback',
       );
     }
     notifyListeners();
@@ -104,25 +107,18 @@ class MainController extends ChangeNotifier {
     notifyListeners();
   }
 
-  bool isConnected = false;
-
-  Future<void> checkConnection(context) async {
-    try {
-      final result = await InternetAddress.lookup('google.com');
-      if (result.isNotEmpty && result[0].address.isNotEmpty) {
-        isConnected = true;
-      }
-    } on SocketException catch (_) {
-      isConnected = false;
-    }
-    notifyListeners();
-  }
-
   int? _filter;
   int? get filter => _filter;
+  bool filterEmpty = false;
 
-  void filterCourses(int i) {
+  Future<void> filterCourses({
+    int? i,
+    String? userUniv,
+    userFac,
+    userPromo,
+  }) async {
     _filter != i ? _filter = i : _filter = null;
+
     notifyListeners();
   }
 
@@ -144,32 +140,29 @@ class MainController extends ChangeNotifier {
         .collection('courses')
         .doc('$userPromo')
         .collection('tuyaux');
-        
+
     if (_filter != null) {
       return _lastDocument == null
           ? query
               .where('title', isEqualTo: courses![_filter!])
-              .orderBy('title')
-              .limit(10)
+              .orderBy('time', descending: true)
+              .limit(30)
               .snapshots()
           : query
               .where('title', isEqualTo: courses![_filter!])
-              .orderBy('title')
-              .startAfterDocument(_lastDocument!)
-              .limit(10)
+              .orderBy('time', descending: true)
+              .limit(30)
               .snapshots();
+      // .startAfterDocument(_lastDocument!)
     } else {
       return _lastDocument == null
-          ? query.orderBy('title').limit(10).snapshots()
-          : query
-              .orderBy('title')
-              .startAfterDocument(_lastDocument!)
-              .limit(10) // Limit to 10 documents per page
-              .snapshots();
+          ? query.orderBy('time', descending: true).limit(30).snapshots()
+          : query.orderBy('time', descending: true).limit(30).snapshots();
+      // .startAfterDocument(_lastDocument!)
     }
   }
 
-  bool? isLoading;
+  bool isLoading = false;
 
   void loadMore() {
     isLoading = true;
@@ -181,5 +174,23 @@ class MainController extends ChangeNotifier {
       }
       isLoading = false;
     });
+  }
+
+  bool isConnected = false;
+
+  Future<void> checkConnection(context) async {
+    try {
+      final result = await InternetAddress.lookup('google.com');
+      if (result.isNotEmpty && result[0].address.isNotEmpty) {
+        isConnected = true;
+      }
+    } on SocketException catch (_) {
+      isConnected = false;
+      myCustomSnackBar(
+        context: context,
+        text: "Erreur... Vérifie ta connexion",
+      );
+    }
+    notifyListeners();
   }
 }

@@ -170,8 +170,11 @@ Container bottomBodyView({
 }) {
   return Container(
     decoration: BoxDecoration(
-      color: Theme.of(context).highlightColor,
-      borderRadius: BorderRadius.circular(25),
+      color: Theme.of(context).scaffoldBackgroundColor,
+      borderRadius: const BorderRadius.only(
+        topLeft: Radius.circular(25),
+        topRight: Radius.circular(25),
+      ),
     ),
     width: width,
     height: MediaQuery.sizeOf(context).height * 0.55,

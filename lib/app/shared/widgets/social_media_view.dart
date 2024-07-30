@@ -27,18 +27,18 @@ Widget socialmediaView(
         child: Icon(
           Bootstrap.google,
           color: isWhite! ? Colors.white : theme.primaryColorLight,
-          size: width * 0.05,
+          size: width * 0.045,
         ),
       ),
       GestureDetector(
         onTap: () {
-          const url = 'https://twitter.com/GeorgesByona';
+          const url = 'https://twitter.com/GeorgesByona23';
           launchApp(url);
         },
         child: Icon(
           Bootstrap.twitter_x,
           color: isWhite ? Colors.white : theme.primaryColorLight,
-          size: width * 0.05,
+          size: width * 0.045,
         ),
       ),
       GestureDetector(
@@ -49,7 +49,18 @@ Widget socialmediaView(
         child: Icon(
           Bootstrap.linkedin,
           color: isWhite ? Colors.white : theme.primaryColorLight,
-          size: width * 0.05,
+          size: width * 0.045,
+        ),
+      ),
+      GestureDetector(
+        onTap: () {
+          const url = 'https://www.instagram.com/georgesbyona';
+          launchApp(url);
+        },
+        child: Icon(
+          Bootstrap.instagram,
+          color: isWhite ? Colors.white : theme.primaryColorLight,
+          size: width * 0.045,
         ),
       ),
       GestureDetector(
@@ -60,7 +71,7 @@ Widget socialmediaView(
         child: Icon(
           Bootstrap.github,
           color: isWhite ? Colors.white : theme.primaryColorLight,
-          size: width * 0.05,
+          size: width * 0.045,
         ),
       ),
       GestureDetector(
@@ -71,7 +82,7 @@ Widget socialmediaView(
         child: Icon(
           Bootstrap.medium,
           color: isWhite ? Colors.white : theme.primaryColorLight,
-          size: width * 0.05,
+          size: width * 0.045,
         ),
       ),
       Gap(width * 0.01),

@@ -175,29 +175,21 @@ class TuyauController extends ChangeNotifier {
       reportContent,
       tuyauID,
       tuyauInfo}) async {
-    try {
-      final result = await InternetAddress.lookup('google.com');
-      if (result.isNotEmpty && result[0].address.isNotEmpty) {
-        await FireStoreServices().addReport(
-          ReportModel(
-            reporterName: reporterName,
-            reporterEmail: reporterEmail,
-            authorName: authorName,
-            authorEmail: authorEmail,
-            reportContent: reportContent,
-            tuyauID: tuyauID,
-          ),
-        );
-
-        myCustomSnackBar(
-          context: context,
-          text: 'Merci pour le signal',
-        );
-      }
-    } on SocketException catch (_) {
+    checkConnection(context);
+    if (isConnected) {
+      await FireStoreServices().addReport(
+        ReportModel(
+          reporterName: reporterName,
+          reporterEmail: reporterEmail,
+          authorName: authorName,
+          authorEmail: authorEmail,
+          reportContent: reportContent,
+          tuyauID: tuyauID,
+        ),
+      );
       myCustomSnackBar(
         context: context,
-        text: "Erreur... Vérifie ta connexion",
+        text: 'Merci pour le signal',
       );
     }
     notifyListeners();
@@ -215,10 +207,10 @@ class TuyauController extends ChangeNotifier {
         String fixedValue = value.toStringAsFixed(1);
         final extension = result.files.first.extension;
         if (extension == 'png' || extension == 'jpg' || extension == 'jpeg') {
-          if (size > 2500000) {
+          if (size > 5000000) {
             myCustomSnackBar(
               context: context,
-              text: "Fichier volumineux > 2Mb",
+              text: "Fichier volumineux > 5Mo",
             );
             Navigator.pop(context);
           } else {
@@ -272,10 +264,10 @@ class TuyauController extends ChangeNotifier {
         String fixedValue = value.toStringAsFixed(1);
         final extension = result.files.first.extension;
         if (extension == 'pdf') {
-          if (size > 2500000) {
+          if (size > 5000000) {
             myCustomSnackBar(
               context: context,
-              text: "Fichier volumineux > 2Mb",
+              text: "Fichier volumineux > 5Mo",
             );
             Navigator.pop(context);
           } else {
@@ -314,6 +306,24 @@ class TuyauController extends ChangeNotifier {
       );
       await FilePicker.platform.clearTemporaryFiles();
       Navigator.pop(context);
+    }
+    notifyListeners();
+  }
+
+  bool isConnected = false;
+
+  Future<void> checkConnection(context) async {
+    try {
+      final result = await InternetAddress.lookup('google.com');
+      if (result.isNotEmpty && result[0].address.isNotEmpty) {
+        isConnected = true;
+      }
+    } on SocketException catch (_) {
+      isConnected = false;
+      myCustomSnackBar(
+        context: context,
+        text: "Erreur... Vérifie ta connexion",
+      );
     }
     notifyListeners();
   }

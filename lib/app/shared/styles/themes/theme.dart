@@ -64,7 +64,7 @@ class AppTheme {
     primaryColor: AppColors.tdYellow,
     primaryColorDark: AppColors.tdWhiteO,
     primaryColorLight: AppColors.tdWhite,
-    highlightColor: Colors.black,
+    highlightColor: AppColors.tdBlack,
     scaffoldBackgroundColor: AppColors.tdBlackO,
     unselectedWidgetColor: AppColors.tdGrey,
     appBarTheme: AppBarTheme(

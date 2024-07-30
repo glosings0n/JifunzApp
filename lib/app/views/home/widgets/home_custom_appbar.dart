@@ -1,15 +1,15 @@
-import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:flutter/material.dart';
 
 import '../../../../controllers/controllers.dart';
 import '../../../shared/shared.dart';
 
 class HomeCustomAppbar extends StatelessWidget {
   final MainController controller;
-  final List courses;
+  final UserDataController user;
   const HomeCustomAppbar({
     super.key,
-    required this.courses,
+    required this.user,
     required this.controller,
   });
 
@@ -32,7 +32,6 @@ class HomeCustomAppbar extends StatelessWidget {
             ],
           ),
           Container(
-            width: width,
             height: width * 0.21,
             padding: EdgeInsets.symmetric(horizontal: width * 0.04),
             child: Column(
@@ -50,11 +49,16 @@ class HomeCustomAppbar extends StatelessWidget {
                   width: width,
                   height: width * 0.065,
                   child: ListView.builder(
-                    itemCount: courses.length,
+                    itemCount: user.courses!.length,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, i) {
                       return GestureDetector(
-                        onTap: () => controller.filterCourses(i),
+                        onTap: () => controller.filterCourses(
+                          i: i,
+                          userUniv: user.univ,
+                          userFac: user.fac,
+                          userPromo: user.promo,
+                        ),
                         child: Container(
                           alignment: Alignment.center,
                           decoration: controller.filter == i
@@ -75,8 +79,10 @@ class HomeCustomAppbar extends StatelessWidget {
                           padding:
                               EdgeInsets.symmetric(horizontal: width * 0.025),
                           margin: EdgeInsets.only(
-                              right:
-                                  i == courses.length - 1 ? 0 : width * 0.025),
+                            right: i == user.courses!.length - 1
+                                ? 0
+                                : width * 0.025,
+                          ),
                           child: Row(
                             children: [
                               if (controller.filter == i) ...{
@@ -87,7 +93,7 @@ class HomeCustomAppbar extends StatelessWidget {
                                 Gap(width * 0.01),
                               },
                               Text(
-                                courses.isEmpty ? '' : courses[i],
+                                user.courses!.isEmpty ? '' : user.courses![i],
                                 style: theme.textTheme.bodySmall!.copyWith(
                                   fontSize: width * 0.025,
                                 ),

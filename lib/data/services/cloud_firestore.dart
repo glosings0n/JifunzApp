@@ -114,7 +114,10 @@ class FireStoreServices {
           "isPDF": tuyauxModel.isPDF,
           "time": FieldValue.serverTimestamp(),
         })
-        .timeout(const Duration(seconds: 30))
+        .timeout(
+          const Duration(seconds: 15),
+          onTimeout: () => tuyau!.timeIsOut(),
+        )
         .then((value) => tuyau!.timeIsOut())
         .onError((error, stackTrace) => tuyau!.timeIsOut())
         .catchError((_) {
