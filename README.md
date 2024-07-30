@@ -6,28 +6,30 @@
 
 ## Concepteur 👨‍💻
 
-Conçu par **Georges Byona Musana** (alias ```G-Losingson``` 😎), étudiant en 2ème année de Baccalauréat en Ingénierie des Logiciels 💻
+Conçu par **Byona Musana Georges** (alias ```G-Losingson``` 😎), étudiant en 2ème année de Baccalauréat en Ingénierie des Logiciels 💻
 
 Il est non seulement passionné de la technologie mais aussi responsable du club des étudiants développeurs **Google** de l'Université Catholique de Bukavu - [GDSC UCB](https://gdsc.community.dev/universite-catholique-de-bukavu-bukavu-democratic-republic-of-the-congo/)
 
-Avec une expérience de 2 ans dans le monde de la tech, il fait preuve d'enthousiasme et de courage ardent ! 🎊
+Avec une expérience de 2 ans dans le monde de la technologie, il fait preuve d'enthousiasme et d'un courage ardent ! 🎊
 
 ### Technologies 🧰
 
-Utilisation des outils modernes de développement :
+**Jifunz'App** est développé avec des outils modernes de développement, entre autre :
 1. ```Flutter``` pour une interface attractive et une meilleure expérience utilisateur 💙
 2. ```Firebase``` pour la gérance backend et la base des données 🔥
 
-#### Version 📱
+#### Version & Mise en jour 📱
 
-**Jifunz'App** n'est qu'à sa première sortie donc la version ```0.1.0``` est en teste.
+**Jifunz'App** n'est qu'à sa première sortie avec la version ```0.1.0```
 
-Testons ensemble en téléchargeant l'apk ici => [jifunzapp.apk](https://drive.google.com/file/d/1GQ7D8ht5G7Y2zOFJ8c6z5kdZcyEc772p/view?usp=sharing)
+Téléchargez ou mettez en jour l'App ➡️ [jifunzapp.apk](https://drive.google.com/file/d/1GQ7D8ht5G7Y2zOFJ8c6z5kdZcyEc772p/view?usp=sharing)
 
 Et faites nous vos feedbacks ! 📫
 
 ##### Réseaux Sociaux 🌐
 
-Retrouver le concepteur en googlant le nom ```Georges Byona``` dans n'importe quel navigateur et vous y trouverez tous les comptes disponibles !
+Retrouver le concepteur en googlant le nom ```Georges Byona``` !
 
-Merci de nous faire part de vos remarques ! 🙂
+Merci de nous faire part de vos remarques !✍
+
+**LosingTech® || ©LosingDynasty 2k24**
