@@ -28,7 +28,7 @@ Et faites nous vos feedbacks ! 📫
 
 ##### Réseaux Sociaux 🌐
 
-Retrouver le concepteur en googlant le nom ```Georges Byona``` !
+Retrouver le concepteur en googlant le nom **Georges Byona** !
 
 Merci de nous faire part de vos remarques !✍
 
