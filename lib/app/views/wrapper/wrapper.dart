@@ -65,14 +65,14 @@ class Wrapper extends StatelessWidget {
         shape: const CircleBorder(),
         elevation: 0,
         foregroundColor: Colors.black,
-        child: Icon(AppIcons.add),
+        child: const Icon(AppIcons.add),
       ),
       bottomNavigationBar: BottomAppBar(
         elevation: 0,
         color: Theme.of(context).highlightColor,
         notchMargin: width * 0.025,
         shape: const CircularNotchedRectangle(),
-        padding: EdgeInsets.symmetric(horizontal: width * 0.15),
+    padding: EdgeInsets.symmetric(horizontal: width * 0.15),    
         height: width * 0.15,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

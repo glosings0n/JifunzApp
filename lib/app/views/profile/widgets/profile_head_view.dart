@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:gap/gap.dart';
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
@@ -48,28 +49,42 @@ class ProfileHeadView extends StatelessWidget {
                 child: Stack(
                   alignment: Alignment.bottomRight,
                   children: [
-                    Container(
-                      width: width * 0.25,
-                      height: width * 0.25,
-                      decoration: BoxDecoration(
-                        color: AppColors.tdGrey,
-                        shape: BoxShape.circle,
-                        image: controller.isConnected
-                            ? DecorationImage(
-                                image: NetworkImage(user.imgUrl!),
-                                fit: BoxFit.cover,
-                              )
-                            : DecorationImage(
-                                image: AssetImage(AppImages.user),
-                                fit: BoxFit.cover,
-                              ),
-                      ),
+                    CachedNetworkImage(
+                      fit: BoxFit.cover,
+                      color: AppColors.tdGrey,
+                      alignment: Alignment.center,
+                      imageUrl: user.imgUrl!,
+                      imageBuilder: (context, imageProvider) {
+                        return Container(
+                          width: 60,
+                          height: 60,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                              image: imageProvider,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        );
+                      },
+                      errorWidget: (context, url, error) {
+                        return Container(
+                          width: 60,
+                          height: 60,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                              image: AssetImage(AppImages.user),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        );
+                      },
                     ),
                     GestureDetector(
                       onTap: () async {
                         user.facs = [];
                         user.promos = [];
-
                         Navigator.push(
                           context,
                           MaterialPageRoute(

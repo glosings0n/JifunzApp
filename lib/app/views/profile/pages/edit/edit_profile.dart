@@ -35,7 +35,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
       appBar: AppBar(
         leading: GestureDetector(
           onTap: () => Navigator.pop(context),
-          child: Icon(AppIcons.closeX),
+          child: const Icon(AppIcons.closeX),
         ),
         title: Text("Modification du profil".tr()),
         titleTextStyle: GoogleFonts.raleway(
